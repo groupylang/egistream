@@ -1,3 +1,5 @@
+#![warn(missing_docs)]
+
 extern crate clap;
 
 use clap::{App, Arg, SubCommand};
@@ -8,4 +10,6 @@ fn main() {
         .author("sKyrBBit, capra314cabra")
         .about("compiler for streaming programming");
     let matches = egistream.get_matches();
+    extern "C" { fn hello(); }
+    unsafe { hello(); }
 }
